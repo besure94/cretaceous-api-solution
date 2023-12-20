@@ -20,16 +20,16 @@ namespace CretaceousApi.Controllers
     //   return AnimalList<Animal>.ToPagedList(FindAll().OrderBy(animal => animal.Name), animalParameters.PageNumber, animalParameters.PageSize);
     // }
 
-    [HttpGet]
-    public async Task<IActionResult> GetAll(AnimalParameter parameters)
-    {
-      var validFilter = new AnimalParameter(parameters.PageNumber, parameters.PageSize);
-      var pagedData = await _db.Animals
-      .Skip((validFilter.PageNumber - 1) * validFilter.PageSize)
-      .Take(validFilter.PageSize)
-      .ToListAsync();
-      return Ok(new PagedResponse<List<Animal>>(pagedData, validFilter.PageNumber, validFilter.PageSize));
-    }
+    // [HttpGet]
+    // public async Task<IActionResult> GetAll(AnimalParameter parameters)
+    // {
+    //   var validFilter = new AnimalParameter(parameters.PageNumber, parameters.PageSize);
+    //   var pagedData = await _db.Animals
+    //   .Skip((validFilter.PageNumber - 1) * validFilter.PageSize)
+    //   .Take(validFilter.PageSize)
+    //   .ToListAsync();
+    //   return Ok(new PagedResponse<List<Animal>>(pagedData, validFilter.PageNumber, validFilter.PageSize));
+    // }
 
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Animal>>> Get(string species, string name, int minimumAge)
