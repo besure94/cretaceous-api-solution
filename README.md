@@ -1,6 +1,6 @@
 # Cretaceous API
 
-#### An application that allows a user to view and create animals.
+#### An application that allows a user to view and create animals from the Cretaceous period.
 
 #### By Brian Scherner
 
