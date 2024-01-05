@@ -1,5 +1,7 @@
 # Cretaceous API
 
+// template README borrowed from LearnHowToProgram.com, needs adjustments made //
+
 #### An application that allows a user to view and create animals from the Cretaceous period.
 
 #### By Brian Scherner
